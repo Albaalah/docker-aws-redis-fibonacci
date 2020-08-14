@@ -10,10 +10,10 @@ script:
   - docker run -e CI=true albaalah/docker-aws-redis-fibonacci npm test
 
 after_success:
-  - docker build -t albaalah/multi-client ./client
-  - docker build -t albaalah/multi-nginx ./nginx
-  - docker build -t albaalah/multi-server ./server
-  - docker build -t albaalah/multi-worker ./worker
+  - docker build -t albaalahwaqaar/multi-client ./client
+  - docker build -t albaalahwaqaar/multi-nginx ./nginx
+  - docker build -t albaalahwaqaar/multi-server ./server
+  - docker build -t albaalahwaqaar/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to docker hub
