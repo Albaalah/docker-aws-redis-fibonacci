@@ -17,7 +17,7 @@ after_success:
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to docker hub
-  - docker push albaalah/multi-client
-  - docker push albaalah/multi-nginx
-  - docker push albaalah/multi-server
-  - docker push albaalah/multi-worker
+  - docker push albaalahwaqaar/multi-client
+  - docker push albaalahwaqaar/multi-nginx
+  - docker push albaalahwaqaar/multi-server
+  - docker push albaalahwaqaar/multi-worker
