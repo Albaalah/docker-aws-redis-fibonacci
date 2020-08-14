@@ -9,6 +9,8 @@
   },
   "scripts": {
     "dev": "nodemon",
-    "start": "node index.js"
+    "start": "node index.js",
+    "docker:build": "docker build -f Dockerfile.dev -t albaalah/fibonacci-server .",
+    "docker:run": "winpty docker run -it -p 3000:3000 albaalah/fibonacci-server"
   }
 }
