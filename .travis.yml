@@ -15,7 +15,7 @@ after_success:
   - docker build -t albaalah/multi-server ./server
   - docker build -t albaalah/multi-worker ./worker
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD" docker.io
   # Push images to docker hub
   - docker push albaalah/multi-client
   - docker push albaalah/multi-nginx
