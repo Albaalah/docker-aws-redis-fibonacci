@@ -5,6 +5,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "docker:build": "docker build -f Dockerfile.dev -t albaalah/fibonacci-worker .",
+    "docker:run": "winpty docker run -it -p 3000:3000 albaalah/fibonacci-worker"
   }
 }
